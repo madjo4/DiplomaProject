@@ -9,7 +9,7 @@ with open("postgresql_password.txt", "r") as file_object:
 DSN = f"postgresql+psycopg2://postgres:{db_password}@localhost:5432/vkinder"
 engine = sqlalchemy.create_engine(DSN)
 
-# create_tables(engine)
+create_tables(engine)
 
 Session = sessionmaker(bind=engine)
 session = Session()
